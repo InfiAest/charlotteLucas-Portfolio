@@ -1,0 +1,145 @@
+.hamburgerMenu {
+  font-size: 1.5rem;
+  align-self: center;
+  color: $colour-primary;
+  padding: 0 5px;
+}
+.hamburgerNav {
+  display: flex;
+  width: 100%;
+}
+.navigation {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 10;
+  &__line {
+    display: flex;
+    order: 1;
+    background-color: $colour-primary;
+    width: 100%;
+    height: 4px;
+    margin-top: 30px;
+    margin-left: -5px;
+  }
+}
+
+.socials {
+  display: none;
+}
+
+.navigation__menu {
+  display: flex;
+  order: 2;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding: 4px;
+  z-index: 99;
+  &--link {
+    list-style: none;
+    font-size: 1.05rem;
+    padding: 0 10px;
+
+    & a {
+      text-decoration: none;
+      font-family: $font-headings;
+      color: $colour-secondary;
+      text-transform: uppercase;
+      font-weight: 600;
+      &:hover {
+        color: $colour-primary;
+      }
+      &.current {
+        text-decoration: 4px line-through;
+        text-decoration-color: $colour-primary;
+      }
+      &.currentWork {
+        text-decoration: 4px line-through;
+        text-decoration-color: $colour-teriary;
+      }
+    }
+  }
+}
+
+.logo-container {
+  width: 100px;
+  margin: 0 auto;
+}
+.logo {
+  width: 100px;
+}
+
+@include for-tablet {
+  .hamburgerMenu {
+    display: none;
+  }
+  .hamburgerNav {
+    flex-direction: column;
+    width: 50px;
+    height: 100%;
+    align-items: center;
+  }
+  .navigation {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 50px;
+    padding: 0 10px;
+    & a {
+      text-decoration: none;
+    }
+    &__line {
+      display: flex;
+      order: 0;
+      background-color: $colour-primary;
+      width: 4px;
+      height: 100%;
+      margin-right: 18px;
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &__menu {
+      display: block;
+      order: 0;
+      position: relative;
+      transform: translateX(0);
+      width: max-content;
+      padding: 0;
+      margin-block-start: 0;
+      &--link {
+        height: 45px;
+        padding: 15px 0;
+        transform: rotate(270deg);
+        text-align: center;
+      }
+    }
+  }
+
+  .socials {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 15px 10px;
+    width: max-content;
+    margin-right: 20px;
+    &__link {
+      font-size: 1.4rem;
+      color: $colour-secondary;
+      &:hover {
+        color: $colour-primary;
+      }
+    }
+  }
+
+  .logo-container {
+    width: 150px;
+  }
+  .logo {
+    width: 150px;
+  }
+}
