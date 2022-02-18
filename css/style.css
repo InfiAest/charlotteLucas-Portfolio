@@ -6,6 +6,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -31,21 +32,60 @@ h2 {
 
 body {
   margin: 0;
-  background-color: #e8e8e8;
+  font-family: "montserrat", sans-serif;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #e8e8e8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
   padding: 10px 0;
 }
 
-.hamburgerMenu {
-  font-size: 1.5rem;
+#section1,
+#section2 {
+  height: 100vh;
+}
+
+.pageContent {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  padding: 8rem 2rem 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-container {
+  max-width: 500px;
+  margin: 4rem auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 5rem;
+  }
+}
+
+.hamburgerButton {
+  padding: 0 0 0 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: #ac827c;
-  padding: 0 5px;
+  z-index: 10;
+}
+
+.hamburgerButton:hover {
+  cursor: pointer;
+}
+
+.hamburgerIcon {
+  font-size: 1.5rem;
 }
 
 .hamburgerNav {
@@ -53,11 +93,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.desktopNav {
+  display: none;
 }
 
 .navigation {
   position: fixed;
-  top: 50px;
+  top: 55px;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +121,6 @@ header {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  background-color: #ac827c;
   width: 100%;
   height: 4px;
   margin-top: 30px;
@@ -141,16 +188,20 @@ header {
 }
 
 @media (min-width: 768px) {
-  .hamburgerMenu {
+  .hamburgerButton,
+  .hamburgerNav {
     display: none;
   }
-  .hamburgerNav {
+  .desktopNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50px;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 50px;
-    height: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -227,10 +278,6 @@ header {
   }
   .socials__link {
     font-size: 1.4rem;
-    color: #373737;
-  }
-  .socials__link:hover {
-    color: #ac827c;
   }
   .logo-container {
     width: 150px;
@@ -238,5 +285,116 @@ header {
   .logo {
     width: 150px;
   }
+}
+
+.a-replacement {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-image: url("../../images/icon-pink.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.largeNavigation {
+  margin: 10rem auto;
+}
+
+.largeNavigation__menu {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.largeNavigation__menu--link {
+  list-style: none;
+  font-size: 4rem;
+  padding-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.largeNavigation__menu--link a {
+  text-decoration: none;
+  color: #ac827c;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+}
+
+.largeNavigation__menu--link a:hover {
+  color: #ac827c;
+  letter-spacing: 4px;
+}
+
+.largeNavigation__menu--link a:hover > .a-replacement {
+  background-image: none;
+}
+
+.largeNavigation__menu--link a:hover > .a-replacement::after {
+  content: "A";
+}
+
+@media (min-width: 768px) {
+  .a-replacement {
+    width: 70px;
+    height: 70px;
+  }
+  .largeNavigation__menu--link {
+    font-size: 6rem;
+  }
+  .a-replacement {
+    width: 58px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .largeNavigation {
+    min-width: 535px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .a-replacement {
+    width: 80px;
+    height: 80px;
+  }
+  .largeNavigation {
+    width: 660px;
+  }
+  .largeNavigation__menu--link {
+    font-size: 7rem;
+  }
+}
+
+.image-container {
+  position: relative;
+  margin: 10rem auto 4rem auto;
+  width: 225px;
+  height: 225px;
+}
+
+.image-border {
+  position: absolute;
+  border: 6px solid #ac827c;
+  height: 180px;
+  width: 180px;
+  z-index: 2;
+}
+
+.self-img {
+  background-image: url("../../images/self-image.jpg");
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

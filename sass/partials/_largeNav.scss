@@ -1,0 +1,80 @@
+.a-replacement {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-image: url("../../images/icon-pink.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.largeNavigation {
+  margin: 10rem auto;
+  &__menu {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    &--link {
+      list-style: none;
+      font-size: 4rem;
+      padding-bottom: 30px;
+      text-align: center;
+      position: relative;
+
+      & a {
+        text-decoration: none;
+        color: $colour-primary;
+        text-transform: uppercase;
+        font-family: $font-headings;
+
+        &:hover {
+          color: $colour-primary;
+          letter-spacing: 4px;
+        }
+        &:hover > .a-replacement {
+          background-image: none;
+        }
+        &:hover > .a-replacement::after {
+          content: "A";
+        }
+      }
+    }
+  }
+}
+
+@include for-tablet {
+  .a-replacement {
+    width: 70px;
+    height: 70px;
+  }
+  .largeNavigation {
+    &__menu {
+      &--link {
+        font-size: 6rem;
+      }
+    }
+  }
+  .a-replacement {
+    width: 58px;
+  }
+}
+@include for-desktop {
+  .largeNavigation {
+    min-width: 535px;
+  }
+}
+
+@include for-xlarge-desktop {
+  .a-replacement {
+    width: 80px;
+    height: 80px;
+  }
+  .largeNavigation {
+    width: 660px;
+    &__menu {
+      &--link {
+        font-size: 7rem;
+      }
+    }
+  }
+}

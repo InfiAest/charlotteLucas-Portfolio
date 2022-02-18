@@ -1,9 +1,37 @@
 body {
   margin: 0;
-  background-color: $colour-background-light;
+  font-family: $font-primary;
+  min-height: 100vh;
 }
 
 header {
-  background-color: $colour-background-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
   padding: 10px 0;
+}
+#section1,
+#section2 {
+  height: 100vh;
+}
+.pageContent {
+  position: relative;
+  width: 100%;
+}
+.container {
+  padding: 8rem 2rem 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.text-container {
+  max-width: 500px;
+  margin: 4rem auto;
+}
+
+@include for-tablet {
+  .container {
+    padding: 5rem;
+  }
 }

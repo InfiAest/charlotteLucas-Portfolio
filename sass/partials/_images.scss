@@ -1,0 +1,26 @@
+.image-container {
+  position: relative;
+  margin: 10rem auto 4rem auto;
+  width: 225px;
+  height: 225px;
+}
+
+.image-border {
+  position: absolute;
+  border: 6px solid $colour-primary;
+  height: 180px;
+  width: 180px;
+  z-index: 2;
+}
+.self-img {
+  background-image: url("../../images/self-image.jpg");
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}

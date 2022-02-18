@@ -12,8 +12,29 @@
 <body>
     <header>
         <div class="navigation">
-            <i class="fas fa-bars hamburgerMenu"></i>
+            <div class="hamburgerButton">
+                <i class="fas fa-bars hamburgerIcon"></i>
+            </div>
+            
             <div class="hamburgerNav">
+                <ul class="navigation__menu">
+                    <li class="navigation__menu--link">
+                        <a href="index.html" class="current">Home</a>
+                    </li>
+                    <li class="navigation__menu--link">
+                        <a href="work.html">Work</a>
+                    </li>
+                    <li class="navigation__menu--link">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="navigation__menu--link">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            
+                <div class="navigation__line"></div>
+            </div>
+            <div class="desktopNav">
                 <ul class="navigation__menu">
                     <li class="navigation__menu--link">
                         <a href="index.html" class="current">Home</a>
@@ -45,6 +66,45 @@
             </a>
         </div>
     </header>
+    <main>
+        <div class="pageContent">
+            
+                <div id="section1">
+                    <div class="container">
+                        <div class="image-container">
+                            <div class="image-border"></div>
+                            <div class="self-img"></div>
+                        </div>
+                        
+                        <div class="text-container">
+                            <h2>Hi, I'm Charlotte.</h2>
+                            <p>Front-end developer and lover of <span class="likes-animation">LOTR</span>.</p>    
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="section2">
+                    <div class="container">
+                        <div class="largeNavigation">
+                            <ul class="largeNavigation__menu">
+                                <li class="largeNavigation__menu--link">
+                                    <a href="work.html">Work</a>
+                                </li>
+                                <li class="largeNavigation__menu--link">
+                                    <a href="about.html"><div class="a-replacement"></div>bout</a>
+                                </li>
+                                <li class="largeNavigation__menu--link">
+                                    <a href="contact.html">Cont<div class="a-replacement"></div>ct</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            
+        </div>
+    </main>
     
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>
