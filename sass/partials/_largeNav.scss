@@ -1,7 +1,7 @@
 .a-replacement {
   display: inline-block;
-  width: 46px;
-  height: 46px;
+  width: 24px;
+  height: 24px;
   background-image: url("../../images/icon-pink.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -9,17 +9,25 @@
 }
 
 .largeNavigation {
-  margin: 10rem auto;
   &__menu {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
     &--link {
       list-style: none;
-      font-size: 4rem;
+      font-size: 2rem;
       padding-bottom: 30px;
       text-align: center;
       position: relative;
+      opacity: 0;
+      transform: translateX(200%);
+      transition: transform 1s, opacity 1s;
+      will-change: transform, opacity;
+
+      &.is-visible {
+        opacity: 1;
+        transform: translateX(0%);
+      }
 
       & a {
         text-decoration: none;
@@ -29,7 +37,7 @@
 
         &:hover {
           color: $colour-primary;
-          letter-spacing: 4px;
+          letter-spacing: 2px;
         }
         &:hover > .a-replacement {
           background-image: none;
@@ -42,38 +50,42 @@
   }
 }
 
-@include for-tablet {
+@include for-large-mobile {
   .a-replacement {
-    width: 70px;
-    height: 70px;
+    width: 35px;
+    height: 35px;
   }
   .largeNavigation {
     &__menu {
       &--link {
-        font-size: 6rem;
+        font-size: 3rem;
       }
     }
   }
+}
+
+@include for-tablet {
   .a-replacement {
-    width: 58px;
+    width: 45px;
+    height: 45px;
+  }
+  .largeNavigation {
+    &__menu {
+      &--link {
+        font-size: 4rem;
+      }
+    }
   }
 }
 @include for-desktop {
-  .largeNavigation {
-    min-width: 535px;
-  }
-}
-
-@include for-xlarge-desktop {
   .a-replacement {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
   }
   .largeNavigation {
-    width: 660px;
     &__menu {
       &--link {
-        font-size: 7rem;
+        font-size: 5rem;
       }
     }
   }

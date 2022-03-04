@@ -6,7 +6,7 @@ export default function renderHamburgerNav() {
     const hamburgerMenu = document.querySelector(".hamburgerNav");
     
     function toggleMenu() {
-        if(hamburgerMenu.style.transform === "translateX(0%)" && window.innerWidth < 768) {
+        if(hamburgerMenu.style.transform === "translateX(0%)" && window.innerWidth < 785) {
             hamburgerMenu.style.transform = "translateX(-100%)";
         }
         else {

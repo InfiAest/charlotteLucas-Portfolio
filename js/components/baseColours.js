@@ -9,8 +9,11 @@ export default function getBaseColours() {
     const navBackgroundColour = document.querySelector(".hamburgerNav");
 
     if(window.location.pathname === "/projectPage.html") {
+        bodyColour.style.color = "#373737";
         bodyColour.style.backgroundColor = "#c3cbc9";
-        headerColour.style.backgroundColor = "#c3cbc9";
+        if (window.innerWidth < 785) {
+          headerColour.style.backgroundColor = "#c3cbc9";
+        }
         navBackgroundColour.style.backgroundColor = "#c3cbc9";
         hamburgerButtonColour.style.backgroundColor = "#c3cbc9";
         hamburgerButtonColour.style.color = "#5c6a66";
@@ -36,8 +39,11 @@ export default function getBaseColours() {
               }
         });
     } else if (window.location.pathname === "/work.html") {
+        bodyColour.style.color = "#e8e8e8";
         bodyColour.style.backgroundColor = "#373737";
-        headerColour.style.backgroundColor = "#373737";
+        if (window.innerWidth < 785) {
+          headerColour.style.backgroundColor = "#373737";
+        }
         navBackgroundColour.style.backgroundColor = "#373737";
         hamburgerButtonColour.style.backgroundColor = "#373737";
         hamburgerButtonColour.style.color = "#ac827c";
@@ -63,8 +69,11 @@ export default function getBaseColours() {
               }
         });
     } else {
+        bodyColour.style.color = "#373737";
         bodyColour.style.backgroundColor = "#e8e8e8";
-        headerColour.style.backgroundColor = "#e8e8e8";
+        if (window.innerWidth < 785) {
+          headerColour.style.backgroundColor = "#e8e8e8";
+        }
         navBackgroundColour.style.backgroundColor = "#e8e8e8";
         hamburgerButtonColour.style.backgroundColor = "#e8e8e8";
         hamburgerButtonColour.style.color = "#ac827c";

@@ -20,7 +20,7 @@
 }
 .navigation {
   position: fixed;
-  top: 55px;
+  top: 0;
   left: 0;
   display: flex;
   width: 100%;
@@ -73,8 +73,8 @@
 }
 
 .logo-container {
-  width: 100px;
-  margin: 0 auto;
+  float: right;
+  margin-right: 1.5rem;
 }
 .logo {
   width: 100px;
@@ -144,10 +144,7 @@
     }
   }
 
-  .logo-container {
-    width: 150px;
-  }
   .logo {
-    width: 150px;
+    width: 120px;
   }
 }
