@@ -9,10 +9,12 @@
 }
 
 .largeNavigation {
+  margin-bottom: 4rem;
   &__menu {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
+    overflow: hidden;
     &--link {
       list-style: none;
       font-size: 2rem;
@@ -21,7 +23,7 @@
       position: relative;
       opacity: 0;
       transform: translateX(200%);
-      transition: transform 1s, opacity 1s;
+      transition: transform 1.5s, opacity 1.5s;
       will-change: transform, opacity;
 
       &.is-visible {

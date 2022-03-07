@@ -22,11 +22,16 @@ h2 {
 
 .emailLink:hover {
   letter-spacing: 2px;
+  color: #ac827c;
 }
 
 .socialLink {
   text-decoration: none;
   color: #373737;
+}
+
+.socialLink:hover {
+  color: #ac827c;
 }
 
 .linkSpacer {
@@ -35,9 +40,44 @@ h2 {
   font-size: 1.4rem;
 }
 
+.scrollingContainer {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0.25s ease-out;
+  transition: opacity 0.5s 0.25s ease-out;
+}
+
+.scrollingContainer.is-visible {
+  opacity: 1;
+}
+
+.is-visible .scroll-text {
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+}
+
+.scroll-text {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.boldText {
+  font-size: 1.1rem;
+  color: #5c6a66;
+  font-weight: 600;
+}
+
 @media (min-width: 480px) {
   h1 {
     font-size: 3rem;
+  }
+  .boldText {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
 
@@ -68,7 +108,7 @@ header {
   padding: 10px 0;
 }
 
-section {
+#section1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +116,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -88,8 +131,9 @@ section {
   overflow: auto;
 }
 
-.container {
-  padding: 4rem 2rem 0 2rem;
+.container1,
+.container2 {
+  padding: 0 2rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,21 +142,24 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 650px;
+}
+
+.container1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 600px;
+}
+
+.container2 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .text-container {
   max-width: 500px;
   margin: 2rem auto;
-}
-
-@media (min-width: 785px) {
-  .container {
-    padding: 6rem 2rem 0 2rem;
-  }
 }
 
 .hamburgerButton {
@@ -337,6 +384,10 @@ section {
   background-size: contain;
 }
 
+.largeNavigation {
+  margin-bottom: 4rem;
+}
+
 .largeNavigation__menu {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
@@ -344,6 +395,7 @@ section {
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+  overflow: hidden;
 }
 
 .largeNavigation__menu--link {
@@ -355,10 +407,10 @@ section {
   opacity: 0;
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s;
+  transition: transform 1.5s, opacity 1.5s, -webkit-transform 1.5s;
   will-change: transform, opacity;
 }
 
@@ -445,7 +497,8 @@ section {
   left: 1.5rem;
 }
 
-.home-img {
+.home-img,
+.about-img-2 {
   background-image: url("../../images/self-image.jpg");
 }
 

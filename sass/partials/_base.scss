@@ -12,9 +12,10 @@ header {
   width: 100%;
   padding: 10px 0;
 }
-section {
+#section1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -25,21 +26,21 @@ section {
   height: 100vh;
   overflow: auto;
 }
-.container {
-  padding: 4rem 2rem 0 2rem;
+.container1,
+.container2 {
+  padding: 0 2rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  min-height: 650px;
+}
+.container1 {
   justify-content: center;
-  min-height: 600px;
+}
+.container2 {
+  justify-content: flex-start;
 }
 .text-container {
   max-width: 500px;
   margin: 2rem auto;
-}
-
-@include for-tablet {
-  .container {
-    padding: 6rem 2rem 0 2rem;
-  }
 }
