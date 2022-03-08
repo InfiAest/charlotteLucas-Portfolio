@@ -39,6 +39,7 @@ h2 {
 .scrollingContainer {
   opacity: 0;
   transition: opacity 0.5s 0.25s ease-out;
+  margin-top: 4rem;
 }
 
 .scrollingContainer.is-visible {
@@ -46,11 +47,11 @@ h2 {
 }
 
 .is-visible .scroll-text {
-  transform: translateY(-80%);
+  transform: translateY(-40%);
 }
 
 .scroll-text {
-  transform: translateY(-50%);
+  transform: translateY(0%);
   transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
   will-change: transform;
 }
