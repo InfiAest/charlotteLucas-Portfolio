@@ -1,0 +1,20 @@
+.buttonContainer {
+  margin: 4rem 0;
+}
+.ctaButton {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: $colour-background-light;
+  background-color: $colour-teriary;
+  padding: 10px 0;
+  margin: 2rem auto;
+  border-radius: 50px;
+  font-family: $font-headings;
+  font-size: 1.1rem;
+  text-decoration: none;
+  &:hover {
+    background-color: $colour-secondary;
+  }
+}

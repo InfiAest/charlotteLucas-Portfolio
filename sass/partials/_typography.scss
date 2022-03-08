@@ -10,6 +10,9 @@ h2 {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+p {
+  margin: 2rem 0;
+}
 
 .emailLink {
   font-size: 1rem;
@@ -37,6 +40,10 @@ h2 {
 }
 
 .scrollingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 150px;
   opacity: 0;
   transition: opacity 0.5s 0.25s ease-out;
 }
@@ -53,6 +60,7 @@ h2 {
   transform: translateY(0);
   transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
   will-change: transform;
+  margin: 0;
 }
 
 .boldText {

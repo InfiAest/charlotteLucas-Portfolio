@@ -27,7 +27,8 @@ header {
   overflow: auto;
 }
 .container1,
-.container2 {
+.container2,
+.container3 {
   padding: 0 2rem;
   margin: 0 auto;
   display: flex;
@@ -35,12 +36,24 @@ header {
   min-height: 650px;
 }
 .container1 {
-  justify-content: flex-end;
+  justify-content: center;
 }
 .container2 {
   justify-content: center;
 }
+.container3 {
+  justify-content: flex-end;
+}
 .text-container {
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 0 auto;
+}
+
+@include for-tablet {
+  .container2 {
+    min-height: 900px;
+  }
+  .container3 {
+    min-height: 100vh;
+  }
 }

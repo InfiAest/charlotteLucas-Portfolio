@@ -12,6 +12,10 @@ h2 {
   margin-bottom: 2rem;
 }
 
+p {
+  margin: 2rem 0;
+}
+
 .emailLink {
   font-size: 1rem;
   font-weight: 600;
@@ -41,6 +45,17 @@ h2 {
 }
 
 .scrollingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 150px;
   opacity: 0;
   -webkit-transition: opacity 0.5s 0.25s ease-out;
   transition: opacity 0.5s 0.25s ease-out;
@@ -63,6 +78,7 @@ h2 {
   transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
   transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
   will-change: transform;
+  margin: 0;
 }
 
 .boldText {
@@ -132,7 +148,8 @@ header {
 }
 
 .container1,
-.container2 {
+.container2,
+.container3 {
   padding: 0 2rem;
   margin: 0 auto;
   display: -webkit-box;
@@ -146,9 +163,9 @@ header {
 }
 
 .container1 {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container2 {
@@ -157,9 +174,24 @@ header {
           justify-content: center;
 }
 
+.container3 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .text-container {
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 785px) {
+  .container2 {
+    min-height: 900px;
+  }
+  .container3 {
+    min-height: 100vh;
+  }
 }
 
 .hamburgerButton {
@@ -468,9 +500,9 @@ header {
 
 .image-container {
   position: relative;
-  margin: 6rem auto 0 auto;
+  margin: 2rem auto 2rem auto;
   width: 225px;
-  height: 225px;
+  height: 300px;
 }
 
 .image-border {
@@ -479,6 +511,8 @@ header {
   height: 180px;
   width: 180px;
   z-index: 2;
+  top: 3rem;
+  left: 0;
 }
 
 .self-img {
@@ -489,7 +523,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 1.5rem;
+  top: 4.5rem;
   left: 1.5rem;
 }
 
@@ -500,5 +534,28 @@ header {
 
 .about-img-1 {
   background-image: url("../../images/38404952_10156530398734084_4630650038500982784_n.jpg");
+}
+
+.buttonContainer {
+  margin: 4rem 0;
+}
+
+.ctaButton {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #e8e8e8;
+  background-color: #5c6a66;
+  padding: 10px 0;
+  margin: 2rem auto;
+  border-radius: 50px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #373737;
 }
 /*# sourceMappingURL=style.css.map */
