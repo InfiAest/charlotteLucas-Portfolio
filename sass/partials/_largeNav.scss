@@ -1,7 +1,7 @@
 .a-replacement {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 30px;
   background-image: url("../../images/icon-pink.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     overflow: hidden;
     &--link {
       list-style: none;
-      font-size: 2rem;
+      font-size: 2.5rem;
       padding-bottom: 30px;
       text-align: center;
       position: relative;
@@ -54,13 +54,13 @@
 
 @include for-large-mobile {
   .a-replacement {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 40px;
   }
   .largeNavigation {
     &__menu {
       &--link {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
     }
   }
@@ -68,21 +68,8 @@
 
 @include for-tablet {
   .a-replacement {
-    width: 45px;
-    height: 45px;
-  }
-  .largeNavigation {
-    &__menu {
-      &--link {
-        font-size: 4rem;
-      }
-    }
-  }
-}
-@include for-desktop {
-  .a-replacement {
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 56px;
   }
   .largeNavigation {
     &__menu {
