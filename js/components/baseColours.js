@@ -43,7 +43,7 @@ export default function getBaseColours() {
                 link.style.color = "#373737";
               }
         });
-    } else if (window.location.pathname === "/work.html") {
+    } else if (window.location.toString().includes("work")) {
         bodyColour.style.color = "#e8e8e8";
         bodyColour.style.backgroundColor = "#373737";
         if (window.innerWidth < 785) {

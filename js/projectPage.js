@@ -5,5 +5,3 @@ import showOnScrollAnimation from "./components/showOnScrollAnimation.js";
 getBaseColours();
 renderHamburgerNav();
 showOnScrollAnimation();
-
-console.log(window.location.toString())
