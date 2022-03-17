@@ -8,12 +8,12 @@ export default function getBaseColours() {
     const socialLinks = document.querySelectorAll(".socials__link");
     const navBackgroundColour = document.querySelector(".hamburgerNav");
 
-    if(window.location.pathname === "/rainyDays.html" || 
-        window.location.pathname === "/barkLife.html" || 
-        window.location.pathname === "/csMuseum.html" || 
-        window.location.pathname === "/liveRock.html" || 
-        window.location.pathname === "/sgPhotography.html" || 
-        window.location.pathname === "/vitrales.html") {
+    if(window.location.pathname === "/rainydays" || 
+        window.location.pathname === "/barklife" || 
+        window.location.pathname === "/csmuseum" || 
+        window.location.pathname === "/liverock" || 
+        window.location.pathname === "/sgphotography" || 
+        window.location.pathname === "/vitrales") {
         bodyColour.style.color = "#373737";
         bodyColour.style.backgroundColor = "#c3cbc9";
         if (window.innerWidth < 785) {
@@ -43,7 +43,7 @@ export default function getBaseColours() {
                 link.style.color = "#373737";
               }
         });
-    } else if (window.location.pathname === "/work.html") {
+    } else if (window.location.pathname === "/work") {
         bodyColour.style.color = "#e8e8e8";
         bodyColour.style.backgroundColor = "#373737";
         if (window.innerWidth < 785) {
