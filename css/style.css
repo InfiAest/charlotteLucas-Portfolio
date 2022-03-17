@@ -548,8 +548,8 @@ header {
 }
 
 .is-visible .scroll-image {
-  -webkit-transform: translateY(-4rem);
-          transform: translateY(-4rem);
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
 }
 
 .scroll-image {
