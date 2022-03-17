@@ -8,12 +8,12 @@ export default function getBaseColours() {
     const socialLinks = document.querySelectorAll(".socials__link");
     const navBackgroundColour = document.querySelector(".hamburgerNav");
 
-    if(window.location.pathname === "/rainydays.html" || 
-        window.location.pathname === "/barklife.html" || 
-        window.location.pathname === "/csmuseum.html" || 
-        window.location.pathname === "/liverock.html" || 
-        window.location.pathname === "/sgphotography.html" || 
-        window.location.pathname === "/vitrales.html") {
+    if(window.location.toString().includes("rainydays") || 
+        window.location.toString().includes("barklife")|| 
+        window.location.toString().includes("csmuseum")|| 
+        window.location.toString().includes("liverock")|| 
+        window.location.toString().includes("sgphotography")|| 
+        window.location.toString().includes("vitrales") ){
         bodyColour.style.color = "#373737";
         bodyColour.style.backgroundColor = "#c3cbc9";
         if (window.innerWidth < 785) {

@@ -6,4 +6,4 @@ getBaseColours();
 renderHamburgerNav();
 showOnScrollAnimation();
 
-console.log(window.location)
+console.log(window.location.toString())
