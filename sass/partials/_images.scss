@@ -47,7 +47,7 @@
 }
 
 .is-visible .scroll-image {
-  transform: translateY(-30%);
+  transform: translateY(-50%);
 }
 
 .scroll-image {
@@ -66,5 +66,8 @@
 @include for-tablet {
   .work-image {
     width: 500px;
+  }
+  .is-visible .scroll-image {
+    transform: translateY(-25%);
   }
 }

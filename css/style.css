@@ -548,8 +548,8 @@ header {
 }
 
 .is-visible .scroll-image {
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .scroll-image {
@@ -572,6 +572,10 @@ header {
 @media (min-width: 785px) {
   .work-image {
     width: 500px;
+  }
+  .is-visible .scroll-image {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
 }
 
