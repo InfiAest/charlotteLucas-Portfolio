@@ -1,0 +1,29 @@
+body {
+  background-color: #c3cbc9;
+  color: #373737;
+}
+
+.hamburgerNav {
+  background-color: #c3cbc9;
+}
+.hamburgerButton {
+  background-color: #c3cbc9;
+  color: #5c6a66;
+}
+.navigation__line {
+  background-color: #5c6a66;
+}
+.navigation__menu--link a,
+.socials__link {
+  color: #373737;
+}
+.navigation__menu--link a:hover,
+.socials__link:hover {
+  color: #5c6a66;
+}
+
+@media (max-width: 785px) {
+  header {
+    background-color: #c3cbc9;
+  }
+}
