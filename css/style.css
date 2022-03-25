@@ -66,8 +66,8 @@ p {
 }
 
 .is-visible .scroll-text {
-  -webkit-transform: translateY(-4rem);
-          transform: translateY(-4rem);
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
 }
 
 .scroll-text {
@@ -84,6 +84,7 @@ p {
 .boldText {
   font-size: 1.1rem;
   color: #5c6a66;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
 }
 
@@ -94,11 +95,19 @@ p {
   .boldText {
     font-size: 1.2rem;
   }
+  .is-visible .scroll-text {
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+  }
 }
 
 @media (min-width: 785px) {
   h1 {
     font-size: 4rem;
+  }
+  .is-visible .scroll-text {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
   }
 }
 
@@ -135,7 +144,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
 }
 
@@ -513,7 +521,7 @@ header {
 
 .image-border {
   position: absolute;
-  border: 6px solid #ac827c;
+  border: 6px solid #5c6a66;
   height: 180px;
   width: 180px;
   z-index: 2;
@@ -533,13 +541,16 @@ header {
   left: 1.5rem;
 }
 
-.home-img,
+.self-img-1 {
+  background-image: url("../../images/selfImages/self-img-1.jpg");
+}
+
 .about-img-2 {
-  background-image: url("../../images/self-image.jpg");
+  background-image: url("../../images/selfImages/self-img-2.jpg");
 }
 
 .about-img-1 {
-  background-image: url("../../images/38404952_10156530398734084_4630650038500982784_n.jpg");
+  background-image: url("../../images/selfImages/self-img-4.jpg");
 }
 
 .work-image {
@@ -600,5 +611,105 @@ header {
 
 .ctaButton:hover {
   background-color: #373737;
+}
+
+.likes-animation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.likes-animation-container p {
+  margin-bottom: 5px;
+}
+
+.likes-carousel {
+  overflow: hidden;
+  display: inline-block;
+  height: 27px;
+  margin-left: 0;
+}
+
+.carousel-inner {
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+}
+
+@-webkit-keyframes scroll {
+  0%,
+  12% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  14%,
+  24% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  27%,
+  48% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50%,
+  60% {
+    -webkit-transform: translateY(-74px);
+            transform: translateY(-74px);
+  }
+  62%,
+  72% {
+    -webkit-transform: translateY(-99px);
+            transform: translateY(-99px);
+  }
+  74%,
+  84% {
+    -webkit-transform: translateY(-125px);
+            transform: translateY(-125px);
+  }
+  86%,
+  100% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+}
+
+@keyframes scroll {
+  0%,
+  12% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  14%,
+  24% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  27%,
+  48% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50%,
+  60% {
+    -webkit-transform: translateY(-74px);
+            transform: translateY(-74px);
+  }
+  62%,
+  72% {
+    -webkit-transform: translateY(-99px);
+            transform: translateY(-99px);
+  }
+  74%,
+  84% {
+    -webkit-transform: translateY(-125px);
+            transform: translateY(-125px);
+  }
+  86%,
+  100% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

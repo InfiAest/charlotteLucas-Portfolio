@@ -14,7 +14,7 @@
 
 .image-border {
   position: absolute;
-  border: 6px solid $colour-primary;
+  border: 6px solid $colour-teriary;
   height: 180px;
   width: 180px;
   z-index: 2;
@@ -33,12 +33,14 @@
   left: 1.5rem;
 }
 
-.home-img,
+.self-img-1 {
+  background-image: url("../../images/selfImages/self-img-1.jpg");
+}
 .about-img-2 {
-  background-image: url("../../images/self-image.jpg");
+  background-image: url("../../images/selfImages/self-img-2.jpg");
 }
 .about-img-1 {
-  background-image: url("../../images/38404952_10156530398734084_4630650038500982784_n.jpg");
+  background-image: url("../../images/selfImages/self-img-4.jpg");
 }
 
 .work-image {
