@@ -40,6 +40,7 @@ export default function renderHamburgerNav() {
   window.onscroll = closeHamburgerNav();
 
   function closeHamburgerNav() {
+    setNavColour();
     if ((navbar.style.transform = "translateX(0%)")) {
       navbar.style.transform = "translateX(-100%)";
     }
