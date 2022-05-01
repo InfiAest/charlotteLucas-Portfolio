@@ -47,6 +47,15 @@ header {
   max-width: 550px;
   margin: 0 auto;
 }
+.likes-animation-container {
+  width: 250px;
+}
+
+@include for-large-mobile {
+  .likes-animation-container {
+    width: 400px;
+  }
+}
 
 @include for-tablet {
   .container2 {
@@ -54,5 +63,8 @@ header {
   }
   .container3 {
     min-height: 100vh;
+  }
+  .likes-animation-container {
+    width: 500px;
   }
 }
