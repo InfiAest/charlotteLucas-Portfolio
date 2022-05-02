@@ -317,13 +317,13 @@ header {
     display: none;
   }
   .navbar {
-    position: relative;
     top: 0;
+    left: 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 0;
-    height: 100%;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -347,7 +347,6 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
     width: 50px;
     padding: 0;
   }
@@ -363,7 +362,7 @@ header {
             order: 0;
     background-color: #ac827c;
     width: 4px;
-    height: 100%;
+    height: 40vh;
     margin: 0 18px;
   }
   .navigation__menu {
@@ -382,6 +381,7 @@ header {
     width: -moz-max-content;
     width: max-content;
     padding: 0;
+    height: 42vh;
   }
   .navigation__menu--link {
     margin: 0 0 2rem 0;
@@ -403,7 +403,10 @@ header {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin: 0 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 0 2px;
   }
   .socials__link {
     font-size: 1.4rem;
