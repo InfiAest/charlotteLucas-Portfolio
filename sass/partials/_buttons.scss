@@ -18,3 +18,23 @@
     background-color: $colour-secondary;
   }
 }
+.goBack-link {
+  text-decoration: none;
+  color: $colour-secondary;
+  display: flex;
+  align-items: center;
+}
+.goBack-link:hover {
+  letter-spacing: 1px;
+}
+.backArrow {
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-image: url("../../images/icon-pink.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(270deg);
+  filter: invert(75%);
+}
