@@ -12,42 +12,43 @@
 </head>
 <body>
     <header>
-        <div class="navigation">
-            <div class="hamburgerButton">
-                <i class="fas fa-bars hamburgerIcon"></i>
-            </div>
-            
-            <div class="navbar">
-                <ul class="navigation__menu">
-                    <li class="navigation__menu--link">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="navigation__menu--link">
-                        <a href="work.html">Work</a>
-                    </li>
-                    <li class="navigation__menu--link">
-                        <a href="about.html" class="current">About</a>
-                    </li>
-                    <li class="navigation__menu--link">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            
-                <div class="navigation__line"></div>
-            </div>
-            
-            <div class="socials">
-                <a href="https://github.com/InfiAest" target="_blank" class="socials__link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/charlotte-lucas-31544b32/" target="_blank" class="socials__link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/infiaest/" target="_blank" class="socials__link"><i class="fab fa-instagram"></i></a>
-            </div>
-            
-        </div>
-
-        <div class="logo-container">
+        <div class="header__logo">
             <a href="index.html">
-                <img class="logo" src="images/charlotte-lucas-logo.png">
+                <img class="header__logo__image" src="images/charlotte-lucas-logo.png">
             </a>
+        </div>
+        <div id="navcontainer" class="navbar--container">
+            <div class="navbar">
+                <label class="navbar__hamburger--label" for="navbar__hamburger"><i class="fas fa-bars navbar__hamburger--icon"></i></label>
+                <input type="checkbox" id="navbar__hamburger">
+                <nav class="navbar__nav">
+                    <ul class="navbar__nav__list">
+                        <li class="navbar__nav__list--link">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="navbar__nav__list--link">
+                            <a href="work.html">Work</a>
+                        </li>
+                        <li class="navbar__nav__list--link">
+                            <a href="about.html" class="current">About</a>
+                        </li>
+                        <li class="navbar__nav__list--link">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="navbar__socials">
+                        <a href="https://github.com/InfiAest" target="_blank" class="navbar__socials--link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/charlotte-lucas-31544b32/" target="_blank" class="navbar__socials--link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/infiaest/" target="_blank" class="navbar__socials--link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+        <div class="desktopSocials">
+            <a href="https://github.com/InfiAest" target="_blank" class="desktopSocials--link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/charlotte-lucas-31544b32/" target="_blank" class="desktopSocials--link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/infiaest/" target="_blank" class="desktopSocials--link"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
 

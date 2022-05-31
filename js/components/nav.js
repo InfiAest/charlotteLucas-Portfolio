@@ -1,16 +1,19 @@
 export default function renderHamburgerNav() {
-  const hamburgerButton = document.querySelector(".hamburgerButton");
-  const navbarColour = document.querySelector(".navbar");
-
-  hamburgerButton.addEventListener("click", toggleMenu);
-
-  const navbar = document.querySelector(".navbar");
+  const navbarColour = document.querySelector(".navbar__nav");
+  const navLinkColour = document.querySelectorAll(".navbar__nav__list--link a");
+  const socialsLinkColour = document.querySelectorAll(".desktopSocials--link");
 
   console.log(window.location.pathname);
 
   function setNavColour() {
     if (window.location.pathname.includes("work")) {
       navbarColour.style.backgroundColor = "#373737";
+      navLinkColour.forEach((link) => {
+        link.style.color = "#e8e8e8";
+      });
+      socialsLinkColour.forEach((link) => {
+        link.style.color = "#e8e8e8";
+      });
     } else if (
       window.location.pathname.includes("rainydays") ||
       window.location.pathname.includes("vitrales") ||
@@ -20,35 +23,22 @@ export default function renderHamburgerNav() {
       window.location.pathname.includes("barklife")
     ) {
       navbarColour.style.backgroundColor = "#c3cbc9";
+      navLinkColour.forEach((link) => {
+        link.style.color = "#373737";
+      });
+      socialsLinkColour.forEach((link) => {
+        link.style.color = "#373737";
+      });
     } else {
       navbarColour.style.backgroundColor = "#e8e8e8";
+      navLinkColour.forEach((link) => {
+        link.style.color = "#373737";
+      });
+      socialsLinkColour.forEach((link) => {
+        link.style.color = "#373737";
+      });
     }
   }
 
-  function toggleMenu() {
-    setNavColour();
-    if (
-      navbar.style.transform === "translateX(0%)" &&
-      window.innerWidth < 785
-    ) {
-      navbar.style.transform = "translateX(-100%)";
-    } else {
-      navbar.style.transform = "translateX(0%)";
-    }
-  }
-
-  window.onscroll = closeHamburgerNav();
-
-  function closeHamburgerNav() {
-    setNavColour();
-    if ((navbar.style.transform = "translateX(0%)")) {
-      navbar.style.transform = "translateX(-100%)";
-    }
-  }
-
-  const menuButtons = document.querySelectorAll(".navbar a");
-
-  menuButtons.forEach((link) => {
-    link.onclick = toggleMenu();
-  });
+  setNavColour();
 }
