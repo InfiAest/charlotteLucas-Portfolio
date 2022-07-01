@@ -20,7 +20,8 @@ export default function renderHamburgerNav() {
       window.location.pathname.includes("sgphotography") ||
       window.location.pathname.includes("liverock") ||
       window.location.pathname.includes("csmuseum") ||
-      window.location.pathname.includes("barklife")
+      window.location.pathname.includes("barklife") ||
+      window.location.pathname.includes("holidaze")
     ) {
       navbarColour.style.backgroundColor = "#c3cbc9";
       navLinkColour.forEach((link) => {

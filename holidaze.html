@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://use.typekit.net/uml3xoq.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="css/baseColours/work.css" />
-    <title>Charlotte Lucas | Work</title>
+    <link rel="stylesheet" href="css/baseColours/projectPage.css" />
+    <title>Charlotte Lucas | Holidaze</title>
 </head>
 
 <body>
     <header>
         <div class="header__logo">
             <a href="index.html">
-                <img class="header__logo__image" src="images/charlotte-lucas-logo-white.png" />
+                <img class="header__logo__image" src="images/charlotte-lucas-logo.png" />
             </a>
         </div>
         <div id="navcontainer" class="navbar--container">
@@ -30,7 +30,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li class="navbar__nav__list--link">
-                            <a href="work.html" class="current">Work</a>
+                            <a href="work.html" class="currentWork">Work</a>
                         </li>
                         <li class="navbar__nav__list--link">
                             <a href="about.html">About</a>
@@ -63,47 +63,64 @@
     <section id="section1">
         <div class="container1">
             <div class="text-container">
-                <h2>Work.</h2>
-                <p>This is a collection of my work for you to see.</p>
+                <a href="/work.html" class="goBack-link">
+                    <div class="backArrow"></div>
+                    all work
+                </a>
+                <h1>Holidaze</h1>
+                <p class="boldText">04.04.2022 - 29.05.2022</p>
 
                 <p>
-                    Currently these projects are websites I was tasked to make for
-                    assignments whilst studying at Noroff. You will find links to the
-                    public github repo and live sites on each of the pages.
+                    This Holidaze site was the project exam at the end of the final
+                    year studying at Noroff. We had to use everything we had learnt
+                    through the year to design and build a hotel booking site for a
+                    holiday company in Bergen.
                 </p>
             </div>
         </div>
     </section>
-
     <section>
         <div class="container2">
-            <div class="largeNavigation">
-                <ul class="largeNavigation__menu">
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="rainydays.html">R<div class="a-replacement"></div>iny D<div class="a-replacement">
-                            </div>ys</a>
-                    </li>
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="csmuseum.html">CS Museum</a>
-                    </li>
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="liverock.html">Live Rock</a>
-                    </li>
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="vitrales.html">Vitr<div class="a-replacement"></div>les</a>
-                    </li>
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="barklife.html">B<div class="a-replacement"></div>rk Life</a>
-                    </li>
-                    <li class="largeNavigation__menu--link show-on-scroll">
-                        <a href="holidaze.html">Holid<div class="a-replacement"></div>ze</a>
-                    </li>
-                </ul>
+            <div class="work-image-container scrollingContainer show-on-scroll">
+                <img src="./images/holidaze/Holidaze-homepage.png" class="work-image scroll-image" />
+            </div>
+            <div class="text-container">
+                <h2>Brief</h2>
+                <p>
+                    To create a hotel booking website with a visitor side where users can
+                    search accomodations and make enquiries, as well as the administration side
+                    where properties and hotels can be added and booking enquiries managed.
+                </p>
+                <p>
+                    Create an API using Strapi to store the data for the establishments,
+                    enquiries and contact submissions.
+                </p>
+
+                <div class="scrollingContainer show-on-scroll">
+                    <p class="scroll-text boldText">Tools used -</p>
+                    <p class="scroll-text boldText">
+                        Adobe XD, Next.JS, Strapi, Heroku, Bootstrap, SASS.
+                    </p>
+                </div>
+
+                <h2>My thoughts</h2>
+                <p>
+                    I am very happy with the outcome of this website. I feel that it looks clean
+                    and professional and that it is also responsive and easy to use.
+                    I am proud of myself for how far I have come with both designing and coding
+                    during my time studying and this website is a good representation of everything
+                    I have learnt.
+                </p>
+
+                <div class="buttonContainer">
+                    <a href="https://github.com/InfiAest/holidaze" target="_blank" class="ctaButton">Github</a>
+                    <a href="https://holidaze-charlottelucas.netlify.app/" target="_blank" class="ctaButton">Website</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="js/work.js" type="module"></script>
+    <script src="js/projectPage.js" type="module"></script>
 </body>
 
 </html>

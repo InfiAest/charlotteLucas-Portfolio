@@ -522,11 +522,11 @@ header {
 
 @media (min-width: 785px) {
   .a-replacement {
-    width: 65px;
-    height: 56px;
+    width: 50px;
+    height: 46px;
   }
   .largeNavigation__menu--link {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 

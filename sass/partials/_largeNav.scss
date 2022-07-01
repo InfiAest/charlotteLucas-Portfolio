@@ -68,13 +68,13 @@
 
 @include for-tablet {
   .a-replacement {
-    width: 65px;
-    height: 56px;
+    width: 50px;
+    height: 46px;
   }
   .largeNavigation {
     &__menu {
       &--link {
-        font-size: 5rem;
+        font-size: 4rem;
       }
     }
   }
